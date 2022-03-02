@@ -10,6 +10,8 @@ using namespace std;
 template <class Any>
 void print(Any any, string end = "\n") {
     cout << any << end;
+    cout << typeid(any).name() << endl; // mostra o tipo da variável
+
     if(end != "\n") {
         cout << endl;
     }
