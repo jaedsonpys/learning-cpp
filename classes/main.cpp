@@ -8,10 +8,8 @@ class Human {
         string name;
         int age;
 
-        Human(string name, int age) {
-            this->name = name;
-            this->age = age;
-        };
+        Human(string name, int age);
+        ~Human(); // desconstrutor
 
         void printID() {
             cout << "Nome: " << this->name << endl;
@@ -34,6 +32,15 @@ class Human {
 void Human::changeName(string newName) {
     this->name = newName;
     cout << "Your name has changed." << endl;
+}
+
+Human::Human(string name, int age) {
+    this->name = name;
+    this->age = age;
+};
+
+Human::~Human() {
+    cout << "The object has been deleted." << endl;
 }
 
 
